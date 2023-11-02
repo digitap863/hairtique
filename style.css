@@ -33,11 +33,11 @@ body{
     right:0;
     left:0;
     bottom:0;
-        z-index: 9999;
-    
-        background: #181818;
-        height: 100vh;
-        width: 100%;
+    z-index: 9999;
+
+    background: #181818;
+    height: 100vh;
+    width: 100%;
 }
 .logo-container-popup{
     margin-top: 50px; /* Adjust the top position as needed */
@@ -131,6 +131,10 @@ body{
     line-height: 137.3%; /* 54.92px */
     text-decoration: none;
 }
+.popup-home a:hover {
+    color: #fff; /* Change the text color to white when hovered */
+    transition: color 0.3s; /* Add a smooth color transition effect */
+}
 
 
 /* for home page gif */
@@ -141,6 +145,7 @@ body{
     height: 100vh;
     
 }
+
 
 .gif-container::before {
     content: "";
@@ -399,7 +404,7 @@ body{
     padding-top: 4rem;
 }
 .dart h1{
-    color: #fff;
+    color: #000000;
 }
 .dart h1 span {
     display: flex;
@@ -449,7 +454,7 @@ body{
     height: 100vh;
     position: sticky;
     top: 0px;
-    background: rgba(26, 26, 26, 0.32);
+    background: rgb(162, 151, 151);
 }
 .next-image{
     position: absolute;
@@ -463,6 +468,12 @@ body{
     top: 9rem;
     left: 112px;
     z-index: 3;
+}
+.left-ser-vector img{
+    width: 9rem;
+}
+.left-ser-vector{
+    margin-top: -70px;
 }
 .cover-model {
     position: absolute;
@@ -551,14 +562,6 @@ right: 11rem;
     bottom: 0;
     left: 0;
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -664,6 +667,7 @@ right: 11rem;
     z-index: 6;
 }
 
+
 .port-card {
     width: calc(33.333% - 30px); /* 33.333% allows for 3 cards in a row with a 30px gap */
     height: 335px;
@@ -680,12 +684,62 @@ right: 11rem;
     
 }
 
+.whole-serv-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    z-index: 10;
+    margin-top: -19rem;
+}
+
+.card-serv {
+    width: 293px;
+    background-color: #F5E5DB;
+    border-radius: 47px;
+    height: 22rem;
+    overflow: hidden; /* Hide the overflow to clip the image during zoom effect */
+    position: relative;
+    transition: transform 0.3s; /* Add a smooth transition for the zoom effect */
+}
+
+.card-serv img {
+    width: 87%;
+    margin: 21px 5px 21px 21px;
+    transition: transform 0.3s; /* Add the same transition to the image */
+}
+
+.card-serv:hover {
+    transform: scale(1.1); /* Zoom in effect on hover */
+}
+
+.card-serv:hover img {
+    transform: scale(1.2); /* Zoom in effect on hover */
+}
+
+
+
+
+
+
+
+
 .port-card img {
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
     border-radius: 30px;
     
+}
+.right-ser-vector img{
+    width: 9rem;
+    z-index: 1;
+}
+.right-ser-vector {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 
@@ -891,20 +945,7 @@ padding: 5px;
     
   }
   
- .service-subhead h2{
-    color: #2C2C2C;
-    font-family: "Playfair Display", serif;
-    font-size: 70px;
-    font-style: normal;
-    font-weight: 400;
- }
- .service-subhead h4{
-    color: #000;
-    font-family: "Inter", sans-serif;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 500;
- }
+
 
  
   .swiper-slide{
@@ -919,147 +960,6 @@ padding: 5px;
  }
 
 
-/* service page start */
-
-
-  .service-head{
-    justify-content: center;
-    text-align: center;
-    padding-top: 150px;
-    color: #000;
-    font-family: "Glamore", sans-serif;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 137.3%; /* 109.84px */
-  }
-
-  .service-page{
-    /* background-color: #F4F0ED; */
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    height: 100vh;
-  }
-  .service-page img {
-    width: 60%;
-}
-
-
-.service-subhead{
-    margin-top: 120px;
-    font-size: 30px;
-    margin-left: 160px;
-}
-
-.h4-head{
-    margin-top: 15px;
-    color: #000;
-    font-family: Inter, Arial, sans-serif;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 158.8%; /* 39.7px */
-}
-
-
-.moutain{
-    display: flex;
-}
-
-.image-container {
-    display: flex;
-    margin-top: 20px;
-    margin-left: -20px;
-}
-
-.circle {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 10px;
-    position: relative;
-}
-
-.circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: filter 0.3s;
-}
-
-.circle::before {
-    content: 'Click Now';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
-    font-weight:normal;
-    pointer-events: none;
-    opacity: 0; /* Set initial opacity to 0 */
-    z-index: 1; /* Ensure it's above the image */
-    white-space: nowrap; /* Prevent text from wrapping to a new line */
-}
-
-.circle:hover img {
-    filter: brightness(30%);
-}
-
-.circle:hover::before {
-    opacity: 1; /* Change opacity to 1 on hover */
-}
-
-
-
-@keyframes blink {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.imageRing {
-    position: absolute;
-    z-index: 10;
-    top: 17%;
-    right: -12%;
-    width: 100%;
-}
-
-
-.service-flower-left {
-    position: absolute;
-    top: 186px; /* Adjust the top position as needed */
-    left: 0; /* Adjust the left position as needed */
-    z-index: 10; 
-}
-    
-.service-flower-left img{
-    width: 170px; /* Set the width of the logo as needed */
-    height: auto ; /* Auto-adjust the height to maintain aspect ratio */
-}
-    
-.service-flower-right {
-    position: absolute;
-    top: 420px;
-    right: 28rem;
-    z-index: 8;
-}
-
-.service-flower-right img{
-    width: 170px;
-    height: auto;
-    
-}
 
 /* footer start */
 
@@ -1077,9 +977,50 @@ padding: 5px;
 }
 
 
+.update-footer{
+    position: sticky;
+    top: 10px;
+    height: 50vh;
+    backdrop-filter: blur(50px);
+    background: #F4F0ED;
+}
+.service-container{
+    width: 100%;
+    height: 100vh;
+    background: #F4F0ED;
+}
+.service-heading{
+    justify-content: center;
+    text-align: center;
+    padding-top: 114px;
+    padding-bottom: 35px;
+}
+.service-heading h1{
+    color: #000;
+    font-family: "Glamore", Arial, sans-serif;
+    
+    font-size: 62px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 137.3%; /* 109.84px */
+}
+.service-card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0px auto 0;
+    padding: 30px 20px;
+    z-index: 6;
+}
+.card-serv h3{
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 100;
 
-
-
+}
 
 .footer-headings h3 {
     color: #2B2B2B;
@@ -1129,6 +1070,7 @@ padding: 5px;
 }
 
 .whole-book{
+
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1280,10 +1222,7 @@ padding: 5px;
 }
 
 
-.for-footerhome{
-    backdrop-filter: blur(5px);
 
-}
 .footer-logo {
     position: absolute;
     left: 85px;
@@ -1450,10 +1389,7 @@ padding: 5px;
  }
 
 
-.service-page{
-    position: absolute;
-    z-index: 10;
-}
+
 
 
 
@@ -1686,23 +1622,8 @@ padding: 5px;
         font-weight: 400;
         line-height: 122.3%;
     }
-    .service-head {
-        justify-content: center;
-        text-align: center;
-        padding-top: 150px;
-        color: #000;
-        font-family: "Glamore", sans-serif;
-        font-size: 40px;
-        font-style: normal;
-        font-weight: 100;
-        line-height: 137.3%;
-    }
-    .service-flower-left{
-        display: none;
-    }
-    .service-flower-right {
-        display: none;
-    }
+   
+   
     .about-heading {
         position: absolute;
         top: 10rem;
@@ -1828,40 +1749,9 @@ padding: 5px;
         height: 412px;
         width: 156px;
     }
-    .service-subhead {
-        margin-top: 69px;
-        font-size: 30px;
-        margin-left: 160px;
-    }
-    .service-flower-right {
-        position: absolute;
-        top: 334px;
-        right: 128px;
-        z-index: 8;
-    }
+   
     
-    .service-page img {
-        width: 68%;
-        height: 68%;
-        top: 12rem;
-        right: -201px;
-    }
     
-    .h4-head {
-        margin-top: 15px;
-        color: #000;
-        font-family: Inter, Arial, sans-serif;
-        font-size: 17px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 158.8%;
-    }
-    .imageRing {
-        position: absolute;
-        z-index: 0;
-        right: -43%;
-        width: 100%;
-    }
 
     .slider {
         width: 360px;
@@ -1952,21 +1842,12 @@ padding: 5px;
         font-style: normal;
         font-weight: 400;
     }
-    .service-subhead h4 {
-        color: #000;
-        font-family: "Inter", sans-serif;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 500;
-    }
-
+   
    
 }
 
 @media(max-width:480px){
-    .service-head h1{
-        font-size: 50px;
-    }
+   
     .pill-input {
         border: 1px solid rgba(12, 12, 12, 0.45);
         border-radius: 30px;
@@ -2035,7 +1916,6 @@ padding: 5px;
         height: auto;
     }
     .button {
-        /* position: absolute; */
         bottom: 7rem;
         right: 88px;
         z-index: 7;
@@ -2212,7 +2092,7 @@ padding: 5px;
     padding-top: 88px;
 }
 .swiper-slide img {
-    width: 95%;
+    width: 106%;
     max-width: 1300px;
 }
 
@@ -2259,7 +2139,7 @@ padding: 5px;
     padding-top: 104px;
 }
 .down-contact {
-    margin-top: 11rem;
+    margin-top: 0rem;
     margin-bottom: 0;
     color: #000;
     text-align: center;
@@ -2284,26 +2164,10 @@ padding: 5px;
     width: 330px;
 }
 
-/* .service-page img {
-    height: 100%;
-    width: 100%;
-    top: 50rem;
-    right: 0px;
-} */
 
-.image-container {
-    display: flex;
-    margin-top: 279px;
-    margin-left: -162px;
-}
-.circle {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 10px;
-    position: relative;
-}
+
+
+
 .port-section {
     width: 100%;
     height: auto;
@@ -2349,16 +2213,8 @@ padding: 5px;
     font-style: normal;
     font-weight: 400;
 }
-.image-container {
-    display: flex;
-    margin-top: 69px;
-    margin-left: -92px;
-}
-.service-subhead {
-    margin-top: 69px;
-    font-size: 19px;
-    margin-left: 93px;
-}
+
+
 .dizooza {
     background: rgba(244, 240, 237, 0.32);
     backdrop-filter: blur(50px);
@@ -2412,8 +2268,65 @@ padding: 5px;
     line-height: 142.3%;
     text-align: justify;
 }
+.whole-serv-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -15rem;
+    gap: 4rem;
+}
+.service-container{
+    height: auto;
+}
+.service-heading h1 {
+    color: #000;
+    font-family: "Glamore", Arial, sans-serif;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 137.3%;
+}
+.left-ser-vector img {
+    width: 7rem;
 }
 
+}
+
+@media(max-width:360px){
+    .tizuza{
+        height: 825px;
+    }
+    .about-heading {
+        position: absolute;
+        top: 6rem;
+        left: 16px;
+        z-index: 3;
+    }
+    .about-para {
+        width: auto;
+        max-width: 320px;
+        position: relative;
+        top: 9rem;
+        left: 19px;
+    }
+    .about-readmore {
+        display: flex;
+        position: absolute;
+        left: -14px;
+    }
+    .about-readmore img {
+        width: 122px;
+        height: auto;
+    }
+    .right-image {
+        right: 0;
+        position: absolute;
+        top: 33rem;
+        left: 15%;
+        z-index: 10;
+    }
+}
    
     
     

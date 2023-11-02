@@ -1,50 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Get the circle elements
-    const circles = document.querySelectorAll(".circle");
-
-    // Get the service content container
-    const serviceTitle = document.querySelector(".service-subhead h2");
-    const serviceDescription = document.querySelector(".service-subhead .h4-head");
-
-    // Define the content for each service
-    const serviceContentMap = {
-        "hair-wash": {
-            title: "Hair wash",
-            description: "Conditioning Wash Deep Cleansing Wash <br> Basic Wash"
-        },
-        "facials": {
-            title: "Premium Facials",
-            description: "Energy C Gold Foil Facial <br> Shahnaz Gold"
-        },
-        "threading": {
-            title: "Threading",
-            description: "Full Face, Brows,Chin,<br> Forehead"
-        },
-        "body-spa": {
-            title: "Body Spa",
-            description: "Full Body Massage with Body Polish <br> Moroccan Bath"
-        },
-    };
-
-    // Initialize the service content with the default content
-    serviceTitle.textContent = serviceContentMap["hair-wash"].title;
-    serviceDescription.innerHTML = serviceContentMap["hair-wash"].description;
-
-    // Add click event listeners to each circle
-    circles.forEach(circle => {
-        circle.addEventListener("click", function () {
-            // Get the service identifier from the data attribute
-            const service = circle.dataset.service;
-
-            // Update only the relevant content
-            serviceTitle.textContent = serviceContentMap[service].title;
-            serviceDescription.innerHTML = serviceContentMap[service].description;
-        });
-    });
-});
-
-    
-
 document.addEventListener("DOMContentLoaded", function() {
     var currentIndex = 0;
     var images = document.querySelectorAll(".slider a");
@@ -128,18 +81,5 @@ window.addEventListener('load', hideLoader);
 
 
 
-// Get the cover model element with the new class and ID
-const coverModel = document.querySelector('.cover-model');
-
-// Function to check if an element is scrolled into view
-function isElementInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
 
 
